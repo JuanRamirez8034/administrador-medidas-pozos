@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Estilos bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/manometro-ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/personalizados.css">
+    <title>Manometros y pozos</title>
+    <script type="text/javascript" src="js/chart.js"></script>
+</head>
+<body class="container-xxl p-0" onload="graficate();">
+    <!-- Navegacion  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger p-4">
+        <div class="container-fluid">
+            <a class="navbar-brand me-5" href="./index.html"><img src="img/manometro-ico.png" alt="Imagen Principal" style="width: 50px; height: 50px;"> MANOMETERS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link text-black fw-bolder fst-italic"><img src="img/ico/casa.png" alt="" style="width: 20px; height: 20px;" class="align-top"> Casa</a></li>
+                <li class="nav-item"><a href="registrar.html" class="nav-link text-black fw-bolder fst-italic"><img src="img/ico/calculadora.png" alt="" style="width: 20px; height: 20px;" class="align-top"> Registrar</a></li>
+                <li class="nav-item"><a href="estadistica.html" class="nav-link text-black fw-bolder fst-italic btn-warning rounded-2"><img src="img/ico/estadistica.png" alt="" style="width: 20px; height: 20px;" class="align-top"> Estadisticas</a></li>
+                <li class="nav-item"><a href="editar.html" class="nav-link text-black fw-bolder fst-italic"><img src="img/ico/editar.png" alt="" style="width: 20px; height: 20px;" class="align-top"> Editar</a></li>
+            </ul>
+        </div>        
+      </nav>
+
+    <!--Cuerpo-->
+    <div class="container-fluid p-2 pb-4 bg-white-opaco min-height"id="fondo">
+        <div class="row container-fluid align-items-center" >
+            <h1 class="fs-1 fw-bolder font-monospace text-center py-4">Seccion Estadistica</h1>
+            
+            <!--Contenedor formulario-->
+            <div class="container-md col-10" >
+                <!--Contenedor datos de pozo buscar-->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input class="form-control"type="text" name="nombrePozos" id="nombrePozo" placeholder="Ingresa un nombre" required onkeypress="buscahistorial(3)">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="button" value="BUSCAR" id="btnbuscar" class="btn btn-success w-100" onclick="buscahistorial(3);">
+                    </div>
+                </div>
+                <div class="container mt-4">
+                    <!--Contenedor donde se muestran los datos de la consulta escritas-->
+                    <div class="row container-fluid py-3 mh-500px" style="display: none;" id="mostrar">
+                        <table class="table table-striped table-bordered w-100 bg-white-transparente" id="tablaResultado">
+                            <thead class=" table-dark">
+                                <tr>
+                                    <td>ID</td>
+                                    <td>NOMBRE</td>
+                                    <td>FECHA</td>
+                                    <td>MEDIA LECTURA</td>
+                                </tr>
+                            </thead>
+                            <tbody id="cuerpoTablaResultado">
+                                
+                            </tbody>
+                        </table>
+                        <div class="row col-sm-12 mx-auto">
+                            <input type="button" value="Graficar" id='btnGraficar' class="btn btn-warning w-50 mx-auto" style="display: none;" onclick="buscarDataGrafica();">
+                        </div>
+                    </div>
+                </div>
+            
+            <!--contenedor Grafica a mostrar-->
+            <div class="container-md col-10 mx-auto mb-5 bg-white-grafic" id="contenedorGrafica">
+                <canvas id="graficaPozo" width="400" height="300" style="max-width: 800px; max-height: 500px;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <!--Footer-->
+      <div class="bg-dark container-fluid pt-4">
+          <div class="row align-items-center">
+              <div class="col-sm-6 align-items-center text-white">
+                <span>
+                    <h4>Enlaces de interes</h4>
+                    <ul>
+                        <li><a href="#">¿Que son manometros?</a></li>
+                        <li><a href="#">¿Que son pozos petroleros?</a></li>
+                        <li><a href="#">Importancia de los manometros</a></li>
+                        <li><a href="#">Areas aplicables</a></li>
+                        <li><a href="#">Evolucion e historia</a></li>
+                    </ul>
+                </span>
+              </div>
+              <div class="col-sm-6 align-items-center text-white">
+                  <h4>Etiquetas</h4>
+                  <p class="etiquetas">
+                      <span>Manometros</span>
+                      <span>Ingeniero</span>
+                      <span>Medición</span>
+                      <span>Peligros</span>
+                      <span>Beneficios</span>
+                      <span>Herramientas</span>
+                      <span>Pozos</span>
+                      <span>Petroleo</span>
+                  </p>
+            </div>
+            <div class="container-fluid p-2 bg-gradient text-center">
+                <span class="text-white fw-lighter">2021 &copy; Todos los derechos reservados<br><p class="fst-italic">Juan Ramirez</p></span>
+            </div>
+          </div>
+      </div>
+<!--Scripts-->
+<!--Jquery-->
+<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>-->
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<!--bootstrap js-->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!--scrips de chart.js
+<script src="js/chart.min.js"></script>
+<script src="js/chart.esm.min.js"></script>
+<script src="js/helpers.esm.min.js"></script>-->
+<!--js personalizados-->
+<script type="text/javascript" src="./js/acciones.js"></script>
+</body>
+</html>

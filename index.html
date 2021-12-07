@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Estilos bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/manometro-ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/personalizados.css">
+    <title>Manometros y pozos</title>
+</head>
+<body class="container-xxl p-0">
+    <!-- Navegacion  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger p-4">
+        <div class="container-fluid">
+            <a class="navbar-brand me-5" href="./index.html"><img src="img/manometro-ico.png" alt="Imagen Principal" style="width: 50px; height: 50px;"> MANOMETERS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link text-black fw-bolder fst-italic btn-warning rounded-2"><img src="img/ico/casa.png" alt="" style="width: 20px; height: 20px;" class="align-top"> Casa</a></li>
+                <li class="nav-item"><a href="registrar.html" class="nav-link text-black fw-bolder fst-italic"><img src="img/ico/calculadora.png" alt="" style="width: 20px; height: 20px;" class="align-top"> Registrar</a></li>
+                <li class="nav-item"><a href="estadistica.html" class="nav-link text-black fw-bolder fst-italic"><img src="img/ico/estadistica.png" alt="" style="width: 20px; height: 20px;" class="align-top"> Estadisticas</a></li>
+                <li class="nav-item"><a href="editar.html" class="nav-link text-black fw-bolder fst-italic"><img src="img/ico/editar.png" alt="" style="width: 20px; height: 20px;" class="align-top"> Editar</a></li>
+            </ul>
+        </div>        
+      </nav>
+
+      <!--Cuerpo-->
+      <div class="container-fluid p-2 pb-4 bg-white-opaco min-height">
+        <div class="row container-fluid align-items-center">
+            <h1 class="fs-1 fw-bolder font-monospace text-center py-4">Bienvenido a su manometro web</h1>
+            <p class="fs-5 py-1 fw-light text-black">
+                Esta es una herramienta web especializada y destinada a brindar al usuario una facilidad en la gestión de 
+                mediciones de manometros de pozos petroleros. Disponible las 24 horas y los 369 dias del año, sí, como lo leiste, "los 369 dias del año".
+                <br>Todo es tan facil y simple como introducir sus medidas obtenidas en varias ocaciones
+                y luego acceder al apartado correspondiente, registrar, graficos, etc...
+            </p>
+            <!--carrusel imagenes-->
+            <div class="col-sm-6 p-1" style="min-height: 450px;">
+                <h2 class="fs-3 fw-bolder text-center py-1">Tu herramienta</h2>
+                <div id="carouselImagenes" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded-3">
+                      <div class="carousel-item active">
+                        <img src="img/manometro-1.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/pozo-petrolero-1.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/manometro-2.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/ingeniero.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/manometro-3.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/pozo-petrolero.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/manometro-4.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselImagenes" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselImagenes" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Siguiente</span>
+                    </button>
+                  </div>
+            </div>
+            <!--carrusel texto-->
+            <div class="col-sm-6 p-1 bg"style="min-height: 450px;">
+                <div id="carouselText" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <h3 class="fs-5 fw-bolder text-center text-black py-3">Pasos a seguir para el uso..</h3>
+                        <span class="d-block w-80 ps-3 fst-italic">
+                            Todo el proceso para poder utilizar la aplicación es muy simple. A continuacion se explica de forma breve las opciones que usted puede utilizar y las funcionabilidad de cada una :)...<br>Tomese un cafecito &#128527
+                        </span>
+                        <img src="img/pasos.png" alt="" class="d-block img-crs-center">
+                      </div>
+                      <div class="carousel-item">
+                        <h3 class="fs-5 fw-bolder text-center text-black py-3">Paso #1: Introduzca sus datos &#128512</h3>
+                        <span class="d-block w-80 ps-3 fst-italic">
+                            Así de simple es todo.<br>- Ingrese a la apcion de <a href="./index.html">Calcular</a><br>- Introduzca su nombre para el pozo<br>- Introduzca las medidas obtenidas de sus manometros<br>- Ingrese la fecha de la lectura<br>- Y obtenga una vista clara de las medidas y su respectiva media
+                        </span>
+                        <img src="img/pasos.png" alt="" class="d-block img-crs-center">
+                      </div>
+                      <div class="carousel-item">
+                        <h3 class="fs-5 fw-bolder text-center text-black py-3">Paso #2: Estadisticas exactas &#128521</h3>
+                        <span class="d-block w-80 ps-3 fst-italic">
+                            No piense que lo engañamos, pues asi de simple sigue siendo.<br>- Ingrese a la apcion de <a href="./estadistica.html">Estadistica</a><br>- Introduzca el nombre del pozo<br>- Precione visualizar<br>- Precione buscas<br>- Precione graficar<br>- Listo puede visualizar su grafica &#128527
+                        </span>
+                        <img src="img/pasos.png" alt="" class="d-block img-crs-center">
+                      </div>
+                      <div class="carousel-item">
+                        <h3 class="fs-5 fw-bolder text-center text-black py-3">Paso #3: Edita tus datos &#129299</h3>
+                        <span class="d-block w-80 ps-3 fst-italic">
+                            Pues si, todo queda guardado en esta seccion.<br>- Ingrese a la apcion de <a href="./editar.html">Editar</a><br>- Introduzca el nombre del pozo<br>- Visualice las fechas y los resultados<br>- Precione buscar<br>-Seleccione eliminar o editar<br>- Haga sus cambios<br>- Precione guardar &#128523
+                        </span>
+                        <img src="img/pasos.png" alt="" class="d-block img-crs-center">
+                      </div>
+                      <div class="carousel-item">
+                        <h3 class="fs-5 fw-bolder text-center text-black py-3">Paso adicional: Creditos &#128523</h3>
+                        <span class="d-block w-80 ps-3 fst-italic">
+                            Pues si, el desarrollador de la pagina necesita apoyo.<br>- Ingrese a la apcion de <a href="#">Urbe.edu/profesores</a><br>- Introduzca el nombre "Juan Ramirez"<br>- Coloque 20pts<br>- Y precione aceptar(soy un ser que lucha para no morir con la universidad &#128531)
+                        </span>
+                        <img src="img/pasos.png" alt="" class="d-block img-crs-center">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselText" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselText" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Siguiente</span>
+                    </button>
+                  </div>
+            </div>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="bg-dark container-fluid pt-4">
+          <div class="row align-items-center">
+              <div class="col-sm-6 align-items-center text-white">
+                <span>
+                    <h4>Enlaces de interes</h4>
+                    <ul>
+                        <li><a href="#">¿Que son manometros?</a></li>
+                        <li><a href="#">¿Que son pozos petroleros?</a></li>
+                        <li><a href="#">Importancia de los manometros</a></li>
+                        <li><a href="#">Areas aplicables</a></li>
+                        <li><a href="#">Evolucion e historia</a></li>
+                    </ul>
+                </span>
+              </div>
+              <div class="col-sm-6 align-items-center text-white">
+                  <h4>Etiquetas</h4>
+                  <p class="etiquetas">
+                      <span>Manometros</span>
+                      <span>Ingeniero</span>
+                      <span>Medición</span>
+                      <span>Peligros</span>
+                      <span>Beneficios</span>
+                      <span>Herramientas</span>
+                      <span>Pozos</span>
+                      <span>Petroleo</span>
+                  </p>
+            </div>
+            <div class="container-fluid p-2 bg-gradient text-center">
+                <span class="text-white fw-lighter">2021 &copy; Todos los derechos reservados<br><p class="fst-italic">Juan Ramirez</p></span>
+            </div>
+          </div>
+      </div>
+<!--Scripts-->
+<!--Jquery-->
+<!--<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>-->
+<script src="js/jquery-3.6.0.slim.js"></script>
+<!--bootstrap js-->
+<script src="js/bootstrap.js"></script>
+<!--js personalizados-->
+<script src="js/acciones.js"></script>
+</body>
+</html>
